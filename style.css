@@ -206,6 +206,175 @@ header {
 
 .subtitle {
     font-style: italic;
+    color: #4a4a4a; /* Cambiado a un gris oscuro para que sea visible */
+}
+
+#open-message-btn {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+#open-message-btn:hover {
+    background-color: #d81b60;
+    transform: translateY(-3px);
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+.message-box {
+    animation: fadeIn 1.5s forwards;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2em; /* Mantenido para escritorio */
+    color: #e91e63;
+    margin-bottom: 5px;
+}
+
+.song-info {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Estilos de la galería de fotos */
+.photo-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 30px auto;
+}
+
+.photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f7e9e9;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden-photo {
+    opacity: 0;
+}
+
+.long-message {
+    text-align: left;
+    line-height: 1.6; /* Aumentado a 1.6 para mejor legibilidad */
+    white-space: pre-line;
+    margin-top: 20px;
+    font-size: 1em; /* Ajustado el tamaño para un mejor ajuste en escritorio */
+    color: black;
+}
+
+.footer-message {
+    margin-top: 30px;
+    font-style: italic;
+    color: #4a4a4a; /* Cambiado a un gris oscuro para que sea visible */
+}
+
+/* Animaciones */
+@keyframes heart-fall {
+    0% { transform: translateY(-100vh) scale(0); opacity: 0; }
+    20% { opacity: 1; transform: translateY(0) scale(1.1); }
+    100% { transform: translateY(120vh) scale(1.2); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    color: #e91e63;
+    font-size: 2em;
+    animation: heart-fall 10s linear infinite;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+@keyframes fly-in {
+    0% { transform: scale(0.5) translateY(50px); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1) translateY(0); }
+}
+
+.te-amo-animation {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: #e91e63;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fly-in 1s ease-in-out forwards;
+}
+
+.hidden-animation {
+    opacity: 0;
+}
+
+/* *** CAMBIOS CLAVE PARA MÓVIL *** */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px; /* Reducción de padding */
+        width: 95%; 
+    }
+
+    .title {
+        font-size: 6vw; /* Ajustado para que se adapte al ancho de la pantalla */
+    }
+
+    .section-title {
+        font-size: 5vw; /* Ajustado para que se adapte al ancho de la pantalla */
+    }
+    
+    .long-message {
+        font-size: 4vw; /* Ajustado para que se adapte al ancho de la pantalla */
+        line-height: 1.5; /* Mejor legibilidad */
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    .photo-container {
+        height: 250px;
+        margin: 20px auto;
+    }
+
+    .te-amo-animation {
+        font-size: 5vw; /* Ajustado para que se adapte al ancho de la pantalla */
+        bottom: 20px;
+    }
+}
+
+.subtitle {
+    font-style: italic;
     color: black;
 }
 
