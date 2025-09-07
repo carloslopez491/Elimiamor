@@ -120,9 +120,9 @@ header {
 
 .long-message {
     text-align: left;
-    line-height: 1.6;
+    line-height: 1.0;
     white-space: pre-line;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .footer-message {
