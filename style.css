@@ -195,9 +195,9 @@ header {
     
     .long-message {
         /* Reducimos el tamaño de la fuente para que quepa mejor */
-        font-size: 0.5em; 
+        font-size: 0.2em; 
         padding: 0; /* Quitamos el padding extra */
-        margin-top: 10px; /* Reducimos el margen superior */
+        margin-top: 5px; /* Reducimos el margen superior */
     }
     
     .photo-container {
